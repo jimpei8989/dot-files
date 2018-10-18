@@ -1,0 +1,83 @@
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
+
+# added by Anaconda2 4.4.0 installer
+export PATH="/Users/wujunpei/anaconda/bin:$PATH"
+
+# Setting PATH for mysql
+export PATH=$PATH:/usr/local/mysql/bin
+
+# Using ST3 on Terminal 
+export PATH=/usr/local/bin:$PATH
+
+# Using typora on Terminal
+alias typora='open -a typora'
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+if [ -f /sw/etc/bash_completion ]; then
+   . /sw/etc/bash_completion
+fi
+
+# Set PS1
+if [[ "$TERM" =~ 256color ]]; then
+     PS1="\[\e[40m\]\[\033[38;5;32m\]\u\[\033[38;5;251m\]@\[\033[38;5;35m\]\h\[\033[38;5;251m\]: \[\033[38;5;184m\]\W\[\033[38;5;251m\]$ \[\033[0m\]"
+else
+     PS1="\[\e[40m\]\[\e[0;37m\]\u@\h: \W$ "
+fi
+
+alias ls="ls -G -F"
+alias la="ls -al"
+
+alias vi="vim"
+# ln -s ~/.vim/.vimrc ~/.vimrc
+
+alias gcc="gcc -std=c99 -Wall"
+alias g++="g++ -std=c++17 -O2 -Wall"
+
+# Directory
+alias CC="cd ~/Documents/CSIE_Council"
+alias Slides="cd ~/reveal.js/Slides"
+alias CODING="cd ~/Documents/Coding"
+alias CF="cd ~/Documents/Coding/Codeforces"
+alias JG="cd ~/Documents/Coding/Judgegirl"
+alias DSA="cd ~/Documents/DSA"
+alias ADA="cd ~/Documents/ADA"
+alias NASA="cd ~/Documents/NASA"
+alias Sprout="cd ~/Documents/Sprout"
+alias NEOJ="cd ~/Documents/Coding/neoj"
+alias TMP="cd ~/Documents/tmp"
+alias NTUJ="cd ~/Documents/Coding/NTUJ"
+alias LA="cd ~/Documents/LA"
+alias SP="cd ~/Documents/SP"
+
+# Git
+alias gs="git status"
+alias gl="git log"
+alias gl1="git log --oneline"
+alias glg="git log --oneline --graph"
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+
+WS() {
+	ssh b06902029@linux"$1".csie.org
+}
+
+WSS() {
+	sftp b06902029@linux"$1".csie.org
+}
+
+alias Pusheen="cat ~/.pusheen_sample"
+
+
+##
+# Your previous /Users/wujunpei/.bash_profile file was backed up as /Users/wujunpei/.bash_profile.macports-saved_2018-03-04_at_20:58:38
+##
+
+# MacPorts Installer addition on 2018-03-04_at_20:58:38: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
