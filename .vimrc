@@ -24,7 +24,13 @@ set ruler
 set cursorline
 
 " Theme
-colorscheme material-monokai
+let hostname = substitute(system('hostname'), '\n', '', '')
+if hostname == "WJPei-MJRO"
+    colorscheme sublimemonokai
+else
+    colorscheme Material-Monokai
+endif
+
 set noshowmode
 set laststatus=2
 let g:lightline = {

@@ -1,0 +1,41 @@
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+
+if [[ "$TERM" =~ 256color ]]; then
+     PS1="\[\e[40m\]\[\033[38;5;32m\]\u\[\033[38;5;251m\]@\[\033[38;5;35m\]\h\[\033[38;5;251m\]: \[\033[38;5;184m\]\W\[\033[38;5;251m\]$ \[\033[0m\]"
+else
+     PS1="\[\e[40m\]\[\e[0;37m\]\u@\h: \W$ "
+fi
+
+LS_COLORS="di=0;34:ex=1;92:ln=0;35"
+export LS_COLORS
+
+alias la="ls -al"
+unalias rm
+
+alias vi="vim"
+alias gcc="gcc -std=c99 -Wall"
+alias g++="g++ -std=c++11 -Wall"
+
+# Directories
+alias SP="cd ~/Documents/SP"
+
+# Git
+alias gs="git status"
+alias gl="git log"
+alias gl1="git log --oneline"
+alias glg="git log --oneline --graph"
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+
+WS() {
+	ssh b06902029@linux"$1".csie.org
+}
+
+WSS() {
+	sftp b06902029@linux"$1".csie.org
+}
+
+alias Pusheen="cat ~/.pusheen_sample"
