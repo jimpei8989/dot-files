@@ -25,9 +25,24 @@ set mouse=a
 set ruler
 set cursorline
 
+" Folding
+set foldmethod=manual
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
+
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
+
 " Theme
 let hostname = substitute(system('hostname'), '\n', '', '')
 colorscheme material-monokai
+
+if !has("gui_running")
+    set t_Co=256
+    set term=screen-256color
+endif
 
 set noshowmode
 set laststatus=2

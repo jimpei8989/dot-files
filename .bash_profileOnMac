@@ -21,12 +21,18 @@ if [ -f /sw/etc/bash_completion ]; then
    . /sw/etc/bash_completion
 fi
 
+# Parse git branch
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 # Set PS1
-if [[ "$TERM" =~ 256color ]]; then
-     PS1="\[\e[40m\]\[\033[38;5;32m\]\u\[\033[38;5;251m\]@\[\033[38;5;35m\]\h\[\033[38;5;251m\]: \[\033[38;5;184m\]\W\[\033[38;5;251m\]$ \[\033[0m\]"
-else
-     PS1="\[\e[40m\]\[\e[0;37m\]\u@\h: \W$ "
-fi
+PS1="\[\033[38;5;32m\]\u\[\033[38;5;251m\]@\[\033[38;5;35m\]\h\[\033[38;5;251m\]: \[\033[38;5;184m\]\W\[\033[38;5;214m\]$(parse_git_branch)\[\033[38;5;251m\]$ \[\033[0m\]"
+# if [[ "$TERM" =~ 256color ]]; then
+#     PS1="\[\033[38;5;32m\]\u\[\033[38;5;251m\]@\[\033[38;5;35m\]\h\[\033[38;5;251m\]: \[\033[38;5;184m\]\W\[\033[38;5;214m\]$(parse_git_branch)\[\033[38;5;251m\]$ \[\033[0m\]"
+# else
+#     PS1="\[\e[40m\]\[\e[0;37m\]\u@\h: \W$ "
+# fi
 
 alias ls="ls -G -F"
 alias la="ls -al"
@@ -45,6 +51,7 @@ alias CF="cd ~/Documents/Coding/Codeforces"
 alias JG="cd ~/Documents/Coding/Judgegirl"
 alias DSA="cd ~/Documents/DSA"
 alias ADA="cd ~/Documents/ADA"
+alias MLF="cd ~/Documents/MLF"
 alias NASA="cd ~/Documents/NASA"
 alias Sprout="cd ~/Documents/Sprout"
 alias NEOJ="cd ~/Documents/Coding/neoj"
@@ -52,6 +59,7 @@ alias TMP="cd ~/Documents/tmp"
 alias NTUJ="cd ~/Documents/Coding/NTUJ"
 alias LA="cd ~/Documents/LA"
 alias SP="cd ~/Documents/SP"
+alias KCIS="cd ~/Documents/KCIS/2018_G7"
 
 # Git
 alias gs="git status"
@@ -61,6 +69,8 @@ alias glg="git log --oneline --graph"
 alias ga="git add"
 alias gc="git commit"
 alias gp="git push"
+
+alias ptt="ssh bbsu@ptt.cc"
 
 WS() {
 	ssh b06902029@linux"$1".csie.org
