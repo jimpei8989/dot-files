@@ -23,12 +23,27 @@ set mouse=a
 set ruler
 set cursorline
 
+" Folding
+set foldmethod=manual
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
+
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
+
 " Theme
 let hostname = substitute(system('hostname'), '\n', '', '')
 if hostname == "WJPei-MJRO"
     colorscheme sublimemonokai
 else
     colorscheme Material-Monokai
+endif
+
+if !has("gui_running")
+    set t_Co=256
+    set term=screen-256color
 endif
 
 set noshowmode
@@ -50,7 +65,6 @@ set backspace=indent,eol,start
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
-set foldmethod=indent
 
 " Search
 set incsearch
@@ -83,7 +97,7 @@ nnoremap <silent> <F2> :w<CR> :AsyncRun make<CR>
 nnoremap <silent> <F3> :w<CR> :AsyncRun gcc % -std=c99   -Wall<CR>
 nnoremap <silent> <F4> :w<CR> :AsyncRun g++ % -std=c++14 -O2 -Wall<CR>
 nnoremap <silent> <F5> :!clear && time ./a.out <CR>
-nnoremap <silent> <F6> :w<CR> !clear && python3 % <CR>
+nnoremap <silent> <F6> :w<CR> :!clear && python3 % <CR>
 
 " To comment with NERDCommenter
 let g:NERDSpaceDelims = 1
