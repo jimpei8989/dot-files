@@ -13,6 +13,8 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
 
 call plug#end()
 
@@ -25,11 +27,7 @@ set cursorline
 
 " Theme
 let hostname = substitute(system('hostname'), '\n', '', '')
-if hostname == "WJPei-MJRO"
-    colorscheme sublimemonokai
-else
-    colorscheme Material-Monokai
-endif
+colorscheme material-monokai
 
 set noshowmode
 set laststatus=2
@@ -50,7 +48,7 @@ set backspace=indent,eol,start
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
-set foldmethod=indent
+set foldmethod=manual
 
 " Search
 set incsearch
@@ -83,7 +81,7 @@ nnoremap <silent> <F2> :w<CR> :AsyncRun make<CR>
 nnoremap <silent> <F3> :w<CR> :AsyncRun gcc % -std=c99   -Wall<CR>
 nnoremap <silent> <F4> :w<CR> :AsyncRun g++ % -std=c++14 -O2 -Wall<CR>
 nnoremap <silent> <F5> :!clear && time ./a.out <CR>
-nnoremap <silent> <F6> :w<CR> !clear && python3 % <CR>
+nnoremap <silent> <F6> :w<CR> :!clear && python3 % <CR>
 
 " To comment with NERDCommenter
 let g:NERDSpaceDelims = 1
@@ -93,3 +91,6 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
 
+" vim-sessions
+let g:session_autoload = 'no'
+let g:session_autosave = 'no'
