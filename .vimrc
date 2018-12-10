@@ -39,7 +39,7 @@ vnoremap <Space> zf
 
 " Theme
 let hostname = substitute(system('hostname'), '\n', '', '')
-colorscheme material-monokai
+colorscheme my-monokai
 " colorscheme monokai-phoenix
 set background=dark
 
