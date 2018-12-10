@@ -15,8 +15,10 @@ Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
-
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
 
 " Display
 set number
@@ -38,16 +40,16 @@ vnoremap <Space> zf
 " Theme
 let hostname = substitute(system('hostname'), '\n', '', '')
 colorscheme material-monokai
-
-if !has("gui_running")
-    set t_Co=256
-    set term=screen-256color
-endif
+" colorscheme monokai-phoenix
+set background=dark
 
 set noshowmode
 set laststatus=2
+" let g:lightline = {
+"     \ 'colorscheme': 'Tomorrow_Night',
+"     \ }
 let g:lightline = {
-    \ 'colorscheme': 'jellybeans',
+    \ 'colorscheme': 'wombat',
     \ }
 
 " Indent
@@ -109,3 +111,6 @@ let g:NERDToggleCheckAllLines = 1
 " vim-sessions
 let g:session_autoload = 'no'
 let g:session_autosave = 'no'
+
+" Airline
+let g:airline_theme = 'jellybeans'

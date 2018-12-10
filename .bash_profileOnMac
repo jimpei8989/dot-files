@@ -26,20 +26,23 @@ parse_git_branch() {
 }
 # Set PS1
 PS1="\[\033[38;5;32m\]\u\[\033[38;5;251m\]@\[\033[38;5;35m\]\h\[\033[38;5;251m\]: \[\033[38;5;184m\]\W\[\033[38;5;214m\]\$(parse_git_branch)\[\033[38;5;251m\]$ \[\033[0m\]"
-# if [[ "$TERM" =~ 256color ]]; then
-#     PS1="\[\033[38;5;32m\]\u\[\033[38;5;251m\]@\[\033[38;5;35m\]\h\[\033[38;5;251m\]: \[\033[38;5;184m\]\W\[\033[38;5;214m\]$(parse_git_branch)\[\033[38;5;251m\]$ \[\033[0m\]"
-# else
-#     PS1="\[\e[40m\]\[\e[0;37m\]\u@\h: \W$ "
-# fi
+if [[ "$TERM" =~ screen ]]; then
+    PS1="\[\033[38;5;32m\]\u\[\033[38;5;251m\]@\[\033[38;5;35m\]\h\[\033[38;5;251m\]: \[\033[38;5;184m\]\w\[\033[38;5;214m\]$(parse_git_branch)\[\033[38;5;251m\]\n$ \[\033[0m\]"
+elif [[ "$TERM" =~ 256color ]]; then
+    PS1="\[\033[38;5;32m\]\u\[\033[38;5;251m\]@\[\033[38;5;35m\]\h\[\033[38;5;251m\]: \[\033[38;5;184m\]\W\[\033[38;5;214m\]$(parse_git_branch)\[\033[38;5;251m\]$ \[\033[0m\]"
+else
+    PS1="\[\e[40m\]\[\e[0;37m\]\u@\h: \W$ "
+fi
 
+# export LSCOLORS="exfxcxdxcxegedabagacad"
 alias ls="ls -G -F"
 alias la="ls -al"
 
 alias vi="vim"
 # ln -s ~/.vim/.vimrc ~/.vimrc
 
-alias gcc="gcc -std=c99 -Wall"
-alias g++="g++ -std=c++17 -O2 -Wall"
+alias gcc="gcc -std=c99 -Wall -Wextra"
+alias g++="g++ -std=c++17 -O2 -Wall -Wextra"
 
 # Directory
 alias CC="cd ~/Documents/CSIE_Council"
@@ -51,13 +54,14 @@ alias DSA="cd ~/Documents/DSA"
 alias ADA="cd ~/Documents/ADA"
 alias MLF="cd ~/Documents/MLF"
 alias NASA="cd ~/Documents/NASA"
+alias MAIL="cd ~/Documents/Mail"
 alias Sprout="cd ~/Documents/Sprout"
 alias NEOJ="cd ~/Documents/Coding/neoj"
 alias TMP="cd ~/Documents/tmp"
-alias NTUJ="cd ~/Documents/Coding/NTUJ"
 alias LA="cd ~/Documents/LA"
 alias SP="cd ~/Documents/SP"
 alias KCIS="cd ~/Documents/KCIS/2018_G7"
+alias FACM="cd ~/Documents/CSIE_Council/107/FreshACM"
 
 # Git
 alias gs="git status"
