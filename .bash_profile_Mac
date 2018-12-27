@@ -1,0 +1,47 @@
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
+
+# added by Anaconda2 4.4.0 installer
+export PATH="/Users/wujunpei/anaconda/bin:$PATH"
+
+# Setting PATH for mysql
+export PATH=$PATH:/usr/local/mysql/bin
+
+# Using ST3 on Terminal 
+export PATH=/usr/local/bin:$PATH
+
+# Using typora on Terminal
+alias typora='open -a typora'
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+if [ -f /sw/etc/bash_completion ]; then
+   . /sw/etc/bash_completion
+fi
+
+# Directory
+alias CC="cd ~/Documents/CSIE_Council"
+alias Slides="cd ~/reveal.js/Slides"
+alias CODING="cd ~/Documents/Coding"
+alias CF="cd ~/Documents/Coding/Codeforces"
+alias JG="cd ~/Documents/Coding/Judgegirl"
+alias DSA="cd ~/Documents/DSA"
+alias ADA="cd ~/Documents/ADA"
+alias MLF="cd ~/Documents/MLF"
+alias NASA="cd ~/Documents/NASA"
+alias MAIL="cd ~/Documents/Mail"
+alias Sprout="cd ~/Documents/Sprout"
+alias NEOJ="cd ~/Documents/Coding/neoj"
+alias TMP="cd ~/Documents/tmp"
+alias LA="cd ~/Documents/LA"
+alias SP="cd ~/Documents/SP"
+alias KCIS="cd ~/Documents/KCIS/2018_G7"
+alias FACM="cd ~/Documents/CSIE_Council/107/FreshACM"
+
+alias ptt="ssh bbsu@ptt.cc"
+
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+
+
