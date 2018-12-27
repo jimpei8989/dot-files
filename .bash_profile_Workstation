@@ -1,0 +1,1 @@
+alias mailserver="ssh root@172.16.217.241"
