@@ -15,7 +15,6 @@ fi
 
 alias ls="ls -G -F"
 alias la="ls -al"
-unalias rm
 
 alias vi="vim"
 
