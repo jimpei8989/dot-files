@@ -13,7 +13,6 @@ fi
 # LS_COLORS="di=0;34:ex=1;92:ln=0;35"
 # export LS_COLORS
 
-alias ls="ls -G -F"
 alias la="ls -al"
 
 alias vi="vim"

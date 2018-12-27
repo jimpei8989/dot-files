@@ -1,2 +1,3 @@
-unalias rm
+# unalias rm
+alias ls="ls --color"
 alias mailserver="ssh root@172.16.217.241"
