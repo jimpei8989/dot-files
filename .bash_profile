@@ -9,3 +9,7 @@ fi
 if [[ $HOSTNAME =~ linux ]] && [[ -f ~/Records/.bash_profile_Workstation ]]; then
     source ~/Records/.bash_profile_Workstation
 fi
+
+if [[ $HOSTNAME =~ MJRO ]] && [[ -f ~/Records/.bash_profile_Workstation ]]; then
+    source ~/Records/.bash_profile_Workstation
+fi
