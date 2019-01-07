@@ -1,3 +1,7 @@
+export LANG=en_US.UTF-8
+
+PATH=$PATH:/home/student/06/b06902029/.local/bin
+
 # unalias rm
 alias ls="ls --color"
 alias mailserver="ssh root@172.16.217.241"
