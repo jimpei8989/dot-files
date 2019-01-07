@@ -114,3 +114,4 @@ let g:session_autosave = 'no'
 
 " Airline
 let g:airline_theme = 'jellybeans'
+
