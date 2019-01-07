@@ -39,9 +39,9 @@ vnoremap <Space> zf
 
 " Theme
 let hostname = substitute(system('hostname'), '\n', '', '')
-colorscheme my-monokai
+colorscheme SaikoMonokai
 " colorscheme monokai-phoenix
-set background=dark
+" set background=dark
 
 set noshowmode
 set laststatus=2
@@ -77,8 +77,8 @@ nnoremap <silent> <F1> :nohl<CR>
 inoremap {<CR>  {<CR>}<Esc>O
 " inoremap [  []<left>
 
-" Pathogen
-execute pathogen#infect()
+" " Pathogen
+" execute pathogen#infect()
 
 " To navigate between splits
 set splitbelow
@@ -96,7 +96,7 @@ let NERDTreeWinSize = 20
 :let g:asyncrun_open = 8
 nnoremap <silent> <F2> :w<CR> :AsyncRun make<CR>
 nnoremap <silent> <F3> :w<CR> :AsyncRun gcc % -std=c99   -Wall<CR>
-nnoremap <silent> <F4> :w<CR> :AsyncRun g++ % -std=c++14 -O2 -Wall<CR>
+nnoremap <silent> <F4> :w<CR> :AsyncRun g++ % -std=c++14 -O2 -Wall -Wextra<CR>
 nnoremap <silent> <F5> :!clear && time ./a.out <CR>
 nnoremap <silent> <F6> :w<CR> :!clear && python3 % <CR>
 
@@ -114,3 +114,4 @@ let g:session_autosave = 'no'
 
 " Airline
 let g:airline_theme = 'jellybeans'
+

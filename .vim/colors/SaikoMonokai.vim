@@ -87,6 +87,7 @@ let s:grey        = { "gui": "#3F565F", "cterm": "238" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "241" }
 let s:darkgrey    = { "gui": "#262626", "cterm": "235" }
 let s:coolgrey    = { "gui": "#506E79", "cterm": "241" }
+let s:steelgrey   = { "gui": "#878787", "cterm": "102" }
 
 let s:pink        = { "gui": "#FC3488", "cterm": "197" }
 let s:green       = { "gui": "#A6E22E", "cterm": "148" }
@@ -97,6 +98,8 @@ let s:orange      = { "gui": "#FD9720", "cterm": "208" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "141" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
+let s:aquamarine  = { "gui": "#5fffd7", "cterm": "86" }
+let s:seagreen    = { "gui": "#5fffd7", "cterm": "151" }
 
 let s:addfg       = { "gui": "#d7ffaf", "cterm": "193" }
 let s:addbg       = { "gui": "#5f875f", "cterm": "65" }
@@ -200,7 +203,7 @@ call s:h("Tag",           { "fg": s:pink })
 
 call s:h("Todo",          { "fg": s:orange,     "format": "bold,italic" })
 call s:h("TODO",          { "fg": s:orange,     "format": "bold,italic" })
-call s:h("Comment",       { "fg": s:coolgrey, "format": "italic" })
+call s:h("Comment",       { "fg": s:steelgrey,  "format": "italic" })
 
 call s:h("Underlined",    { "fg": s:green })
 call s:h("Ignore",        {})

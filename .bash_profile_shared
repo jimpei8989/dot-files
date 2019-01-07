@@ -13,6 +13,8 @@ fi
 # LS_COLORS="di=0;34:ex=1;92:ln=0;35"
 # export LS_COLORS
 
+alias SRC="source ~/.bash_profile"
+
 alias la="ls -al"
 
 alias vi="vim"
@@ -33,3 +35,58 @@ WS() {
 WSS() {
 	sftp b06902029@linux"$1".csie.org
 }
+
+# ttime() {
+#     AUTO=true
+#     ONELINE=false
+#     MIN=false
+#     SEC=false
+#     MSC=false
+#     while [[ $1 =~ '--' ]]; do
+#         para=$1
+#         case $para in
+#             --oneline)
+#                 ONELINE=true
+#                 AUTO=false
+#                 shift
+#                 ;;
+#             --min)
+#                 MIN=true
+#                 AUTO=false
+#                 shift
+#                 ;;
+#             --sec)
+#                 SEC=true
+#                 AUTO=false
+#                 shift
+#                 ;;
+#             --ms)
+#                 MSC=true
+#                 AUTO=false
+#                 shift
+#                 ;;
+#         esac
+#     done
+#
+#     tmp=$({ time $@ ; } 2>&1 > /dev/null | grep "real" | cut -f 2)
+#     min=$(echo $tmp | sed -E 's/^([0-9]{1,2})m.*/\1/g')
+#     sec=$(echo $tmp | sed -E 's/.*m([0-9]{1,2})\..*/\1/g')
+#     msc=$(echo $tmp | sed -E 's/m[0-9]{1,2}\.([0-9]{3})s$/\1/g' | sed 's/^0*//')
+#
+#     if [[ $AUTO = true ]]; then
+#         if [[ $min -ne 0 ]]; then
+#             MIN=true
+#         else
+#             if [[ $sec -ge 10 ]]; then
+#                 SEC=true
+#             else
+#                 MSC=true
+#             fi
+#         fi
+#     fi
+#
+#     if [[ $ONELINE = true ]]; then  echo $min : $sec : $msc; fi
+#     if [[ $MIN     = true ]]; then  echo ${min} m ${sec} s; fi
+#     if [[ $SEC     = true ]]; then  echo ${sec} s ${msc} ms; fi
+#     if [[ $MSC     = true ]]; then  echo $((${sec} * 1000 + ${msc})) ms; fi
+# }
