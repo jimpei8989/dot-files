@@ -17,8 +17,9 @@ Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
-" To help with the pydoc with `K`
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
+
+" " To help with the pydoc with `K`
+" Plug 'python-mode/python-mode', { 'branch': 'develop' }
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 call plug#end()
