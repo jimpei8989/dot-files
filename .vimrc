@@ -3,6 +3,8 @@ filetype plugin indent on
 
 " Plugin
 call plug#begin('~/.vim/plugged')
+
+Plug 'skywind3000/asyncrun.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -15,6 +17,8 @@ Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
+" To help with the pydoc with `K`
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 call plug#end()
@@ -95,7 +99,7 @@ let NERDTreeWinSize = 20
 " To compile files
 :let g:asyncrun_open = 8
 nnoremap <silent> <F2> :w<CR> :AsyncRun make<CR>
-nnoremap <silent> <F3> :w<CR> :AsyncRun gcc % -std=c99   -Wall<CR>
+nnoremap <silent> <F3> :w<CR> :AsyncRun gcc % -std=c99   -O2 -Wall -Wextra<CR>
 nnoremap <silent> <F4> :w<CR> :AsyncRun g++ % -std=c++14 -O2 -Wall -Wextra<CR>
 nnoremap <silent> <F5> :!clear && time ./a.out <CR>
 nnoremap <silent> <F6> :w<CR> :!clear && python3 % <CR>

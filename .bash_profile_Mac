@@ -1,23 +1,12 @@
 # Setting PATH for Python 3.6
 # The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
-export PATH
 
-# added by Anaconda2 4.4.0 installer
-export PATH="/Users/wujunpei/anaconda/bin:$PATH"
-
-# Setting PATH for mysql
-export PATH=$PATH:/usr/local/mysql/bin
-
-# Using ST3 on Terminal 
-export PATH=/usr/local/bin:$PATH
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/TeX/texbin:/opt/local/bin:/opt/local/sbin:/opt/X11/bin"
 
 # Using typora on Terminal
 alias typora='open -a typora'
 
 alias ls="ls -G -F"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 if [ -f /sw/etc/bash_completion ]; then
    . /sw/etc/bash_completion
@@ -43,7 +32,4 @@ alias KCIS="cd ~/Documents/KCIS/2018_G7"
 alias FACM="cd ~/Documents/CSIE_Council/107/FreshACM"
 
 alias ptt="ssh bbsu@ptt.cc"
-
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-
 
