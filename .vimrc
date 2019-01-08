@@ -103,6 +103,7 @@ nnoremap <silent> <F3> :w<CR> :AsyncRun gcc % -std=c99   -O2 -Wall -Wextra<CR>
 nnoremap <silent> <F4> :w<CR> :AsyncRun g++ % -std=c++14 -O2 -Wall -Wextra<CR>
 nnoremap <silent> <F5> :!clear && time ./a.out <CR>
 nnoremap <silent> <F6> :w<CR> :!clear && python3 % <CR>
+nnoremap <silent> <F7> :w<CR> :!clear && bash % <CR>
 
 " To comment with NERDCommenter
 let g:NERDSpaceDelims = 1
@@ -116,6 +117,6 @@ let g:NERDToggleCheckAllLines = 1
 let g:session_autoload = 'no'
 let g:session_autosave = 'no'
 
-" Airline
-let g:airline_theme = 'jellybeans'
+" " Airline
+" let g:airline_theme = 'jellybeans'
 
