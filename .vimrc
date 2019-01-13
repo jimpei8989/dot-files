@@ -120,4 +120,11 @@ let g:session_autosave = 'no'
 
 " " Airline
 " let g:airline_theme = 'jellybeans'
+"
+" vim-multiple cursor
+let g:multi_cursor_start_word_key      = '<C-a>'
+let g:multi_cursor_select_all_word_key = '<A-a>'
+let g:multi_cursor_start_key           = 'g<C-a>'
+let g:multi_cursor_select_all_key      = 'g<A-a>'
+let g:multi_cursor_next_key            = '<C-a>'
 
