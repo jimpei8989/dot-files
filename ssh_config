@@ -1,0 +1,109 @@
+# Github
+Host github
+    Hostname github.com
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/github
+
+# Workstation, linux 1-15
+Host linux1
+    Hostname linux1.csie.ntu.edu.tw
+    User b06902029
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/workstation
+Host linux2
+    Hostname linux2.csie.ntu.edu.tw
+    User b06902029
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/workstation
+Host linux3
+    Hostname linux3.csie.ntu.edu.tw
+    User b06902029
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/workstation
+Host linux4
+    Hostname linux4.csie.ntu.edu.tw
+    User b06902029
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/workstation
+Host linux5
+    Hostname linux5.csie.ntu.edu.tw
+    User b06902029
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/workstation
+Host linux6
+    Hostname linux6.csie.ntu.edu.tw
+    User b06902029
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/workstation
+Host linux7
+    Hostname linux7.csie.ntu.edu.tw
+    User b06902029
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/workstation
+Host linux8
+    Hostname linux8.csie.ntu.edu.tw
+    User b06902029
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/workstation
+Host linux9
+    Hostname linux9.csie.ntu.edu.tw
+    User b06902029
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/workstation
+Host linux10
+    Hostname linux10.csie.ntu.edu.tw
+    User b06902029
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/workstation
+Host linux11
+    Hostname linux11.csie.ntu.edu.tw
+    User b06902029
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/workstation
+Host linux12
+    Hostname linux12.csie.ntu.edu.tw
+    User b06902029
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/workstation
+Host linux13
+    Hostname linux13.csie.ntu.edu.tw
+    User b06902029
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/workstation
+Host linux14
+    Hostname linux14.csie.ntu.edu.tw
+    User b06902029
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/workstation
+Host linux15
+    Hostname linux15.csie.ntu.edu.tw
+    User b06902029
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/workstation
+
+# NLP, nlp, nlp 2-4
+Host nlp
+    Hostname nlp.csie.org
+    User wjpei
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/nlp
+Host nlp2
+    Hostname nlp2.csie.org
+    User wjpei
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/nlp
+Host nlp3
+    Hostname nlp3.csie.org
+    User wjpei
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/nlp
+Host nlp4
+    Hostname nlp4.csie.org
+    User wjpei
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/nlp
+Host nlp5
+    Hostname nlp5.csie.org
+    User wjpei
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/nlp
