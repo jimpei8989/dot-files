@@ -13,3 +13,7 @@ fi
 if [[ $HOSTNAME =~ MJRO ]] && [[ -f ~/Records/.bash_profile_Workstation ]]; then
     source ~/Records/.bash_profile_Workstation
 fi
+
+if [[ $HOSTNAME =~ nlp ]] && [[ -f ~/Records/.bash_profile_Workstation ]]; then
+    source ~/Records/.bash_profile_NLP
+fi
