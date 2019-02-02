@@ -1,6 +1,13 @@
+# # Default
+# Host *
+#     AddKeysToAgent yes
+#     UseKeychain yes
+#     IdentityFile ~/.ssh/github
+
 # Github
 Host github
-    Hostname github.com
+    AddKeysToAgent yes
+    UseKeychain yes
     IdentitiesOnly yes
     IdentityFile ~/.ssh/github
 

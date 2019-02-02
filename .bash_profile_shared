@@ -1,11 +1,18 @@
+
+NormColor="\[\033[38;5;251m\]"
+UserColor="\[\033[38;5;32m\]"
+HostColor="\[\033[38;5;35m\]"
+WDirColor="\[\033[38;5;184m\]"
+GitBColor="\[\033[38;5;214m\]"
+
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
 if [[ "$TERM" =~ screen ]]; then
-    PS1="\[\033[38;5;32m\]\u\[\033[38;5;251m\]@\[\033[38;5;35m\]\h\[\033[38;5;251m\]: \[\033[38;5;184m\]\w\[\033[38;5;214m\]\$(parse_git_branch)\[\033[38;5;251m\]\n$ \[\033[0m\]"
+    PS1="${UserColor}\u${NormColor}@${HostColor}\h${NormColor}: ${WDirColor}\w${GitBColor}\$(parse_git_branch)${NormColor}\n$ \[\033[0m\]"
 elif [[ "$TERM" =~ 256color ]]; then
-    PS1="\[\033[38;5;32m\]\u\[\033[38;5;251m\]@\[\033[38;5;35m\]\h\[\033[38;5;251m\]: \[\033[38;5;184m\]\W\[\033[38;5;214m\]\$(parse_git_branch)\[\033[38;5;251m\]$ \[\033[0m\]"
+    PS1="${UserColor}\u${NormColor}@${HostColor}\h${NormColor}: ${WDirColor}\W${GitBColor}\$(parse_git_branch)${NormColor}$ \[\033[0m\]"
 else
     PS1="\[\e[40m\]\[\e[0;37m\]\u@\h: \W$ "
 fi
@@ -16,6 +23,7 @@ fi
 alias SRC="source ~/.bash_profile"
 
 alias la="ls -al"
+alias ll="ls -l"
 
 alias vi="vim"
 
@@ -27,66 +35,3 @@ alias glg="git log --oneline --graph"
 alias ga="git add"
 alias gc="git commit"
 alias gp="git push"
-
-WS() {
-	ssh b06902029@linux"$1".csie.org
-}
-
-WSS() {
-	sftp b06902029@linux"$1".csie.org
-}
-
-# ttime() {
-#     AUTO=true
-#     ONELINE=false
-#     MIN=false
-#     SEC=false
-#     MSC=false
-#     while [[ $1 =~ '--' ]]; do
-#         para=$1
-#         case $para in
-#             --oneline)
-#                 ONELINE=true
-#                 AUTO=false
-#                 shift
-#                 ;;
-#             --min)
-#                 MIN=true
-#                 AUTO=false
-#                 shift
-#                 ;;
-#             --sec)
-#                 SEC=true
-#                 AUTO=false
-#                 shift
-#                 ;;
-#             --ms)
-#                 MSC=true
-#                 AUTO=false
-#                 shift
-#                 ;;
-#         esac
-#     done
-#
-#     tmp=$({ time $@ ; } 2>&1 > /dev/null | grep "real" | cut -f 2)
-#     min=$(echo $tmp | sed -E 's/^([0-9]{1,2})m.*/\1/g')
-#     sec=$(echo $tmp | sed -E 's/.*m([0-9]{1,2})\..*/\1/g')
-#     msc=$(echo $tmp | sed -E 's/m[0-9]{1,2}\.([0-9]{3})s$/\1/g' | sed 's/^0*//')
-#
-#     if [[ $AUTO = true ]]; then
-#         if [[ $min -ne 0 ]]; then
-#             MIN=true
-#         else
-#             if [[ $sec -ge 10 ]]; then
-#                 SEC=true
-#             else
-#                 MSC=true
-#             fi
-#         fi
-#     fi
-#
-#     if [[ $ONELINE = true ]]; then  echo $min : $sec : $msc; fi
-#     if [[ $MIN     = true ]]; then  echo ${min} m ${sec} s; fi
-#     if [[ $SEC     = true ]]; then  echo ${sec} s ${msc} ms; fi
-#     if [[ $MSC     = true ]]; then  echo $((${sec} * 1000 + ${msc})) ms; fi
-# }
