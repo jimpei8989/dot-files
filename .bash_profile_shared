@@ -1,4 +1,3 @@
-
 NormColor="\[\033[38;5;251m\]"
 UserColor="\[\033[38;5;32m\]"
 HostColor="\[\033[38;5;35m\]"
@@ -26,6 +25,10 @@ alias la="ls -al"
 alias ll="ls -l"
 
 alias vi="vim"
+
+# tmux
+
+alias ta="tmux a"
 
 # Git
 alias gs="git status"
