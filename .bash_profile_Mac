@@ -13,23 +13,19 @@ if [ -f /sw/etc/bash_completion ]; then
 fi
 
 # Directory
-alias CC="cd ~/Documents/CSIE_Council"
 alias Slides="cd ~/reveal.js/Slides"
 alias CODING="cd ~/Documents/Coding"
 alias CF="cd ~/Documents/Coding/Codeforces"
-alias JG="cd ~/Documents/Coding/Judgegirl"
-alias DSA="cd ~/Documents/DSA"
-alias ADA="cd ~/Documents/ADA"
 alias MLF="cd ~/Documents/MLF"
 alias NASA="cd ~/Documents/NASA"
 alias MAIL="cd ~/Documents/Mail"
 alias Sprout="cd ~/Documents/Sprout"
 alias NEOJ="cd ~/Documents/Coding/neoj"
 alias TMP="cd ~/Documents/tmp"
-alias LA="cd ~/Documents/LA"
-alias SP="cd ~/Documents/SP"
 alias KCIS="cd ~/Documents/KCIS/2018_G7"
-alias FACM="cd ~/Documents/CSIE_Council/107/FreshACM"
+alias HTML="cd ~/Documents/HTML"
+alias CNS="cd ~/Documents/CNS"
+alias HYML="cd ~/Documents/HYML"
 
 alias ptt="ssh bbsu@ptt.cc"
 
