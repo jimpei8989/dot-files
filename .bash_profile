@@ -11,7 +11,7 @@ if [[ $HOSTNAME =~ linux ]] && [[ -f ~/Records/.bash_profile_Workstation ]]; the
 fi
 
 if [[ $HOSTNAME =~ MJRO ]] && [[ -f ~/Records/.bash_profile_Workstation ]]; then
-    source ~/Records/.bash_profile_Workstation
+    source ~/Records/.bash_profile_MJRO
 fi
 
 if [[ $HOSTNAME =~ nlp ]] && [[ -f ~/Records/.bash_profile_Workstation ]]; then
