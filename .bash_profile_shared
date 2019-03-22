@@ -14,19 +14,17 @@ function virtualenv_info(){
         # In case you don't have one activated
         venv=''
     fi
-    [[ -n "$venv" ]] && echo "($venv)"
+    [[ -n "$venv" ]] && echo "($venv) "
 }
 
-
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-VENV="\$(virtualenv_info)"
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
 if [[ "$TERM" =~ screen ]]; then
-    PS1="${VenvColor}${VENV}${UserColor}\u${NormColor}@${HostColor}\h${NormColor}: ${WDirColor}\w${GitBColor}\$(parse_git_branch)${NormColor}\n$ \[\033[0m\]"
+    PS1="${VenvColor}\$(virtualenv_info)${UserColor}\u${NormColor}@${HostColor}\h${NormColor}: ${WDirColor}\w${GitBColor}\$(parse_git_branch)${NormColor}\n$ \[\033[0m\]"
 elif [[ "$TERM" =~ 256color ]]; then
     PS1="${UserColor}\u${NormColor}@${HostColor}\h${NormColor}: ${WDirColor}\W${GitBColor}\$(parse_git_branch)${NormColor}$ \[\033[0m\]"
 else
