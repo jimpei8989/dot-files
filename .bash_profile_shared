@@ -1,6 +1,7 @@
 NormColor="\[\033[38;5;251m\]"
 UserColor="\[\033[38;5;32m\]"
 HostColor="\[\033[38;5;35m\]"
+TimeColor="\[\033[38;5;244m\]"
 WDirColor="\[\033[38;5;184m\]"
 GitBColor="\[\033[38;5;214m\]"
 VenvColor="\[\033[38;5;171m\]"
@@ -24,7 +25,7 @@ parse_git_branch() {
 }
 
 if [[ "$TERM" =~ screen ]]; then
-    PS1="${VenvColor}\$(virtualenv_info)${UserColor}\u${NormColor}@${HostColor}\h${NormColor}: ${WDirColor}\w${GitBColor}\$(parse_git_branch)${NormColor}\n$ \[\033[0m\]"
+    PS1="${VenvColor}\$(virtualenv_info)${UserColor}\u${NormColor}@${HostColor}\h${NormColor}: ${WDirColor}\w${GitBColor}\$(parse_git_branch)\n${TimeColor}(\A)${NormColor}$ \[\033[0m\]"
 elif [[ "$TERM" =~ 256color ]]; then
     PS1="${UserColor}\u${NormColor}@${HostColor}\h${NormColor}: ${WDirColor}\W${GitBColor}\$(parse_git_branch)${NormColor}$ \[\033[0m\]"
 else
