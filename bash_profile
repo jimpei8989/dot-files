@@ -42,6 +42,7 @@ alias RCD="cd ~/Records"
 # echo "Wu-Jun Pei" | shasum -a 256
 alias Lucky="echo 50756711264384381850616619995309447969109689825336919605444730053665222018857"
 
+alias l="ls"
 alias ll="ls -l"
 alias la="ls -al"
 alias ld="ls -ld"
@@ -50,14 +51,13 @@ alias lad="ls -ald"
 alias vi="vim"
 
 # tmux
-
 alias ta="tmux a"
 
 # Git
-alias gs="git status"
-alias gl="git log"
-alias gl1="git log --oneline"
-alias glg="git log --oneline --graph"
-alias ga="git add"
-alias gc="git commit"
-alias gp="git push"
+# alias gs="git status"
+# alias gl="git log"
+# alias gl1="git log --oneline"
+# alias glg="git log --oneline --graph"
+# alias ga="git add"
+# alias gc="git commit"
+# alias gp="git push"
