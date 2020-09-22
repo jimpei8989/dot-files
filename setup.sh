@@ -8,6 +8,8 @@ ln -s $PREFIX_DIR/.zshrc $HOME/.zshrc
 
 # OH-MY-ZSH
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if [[ -d $HOME/.oh-my-zsh/custom/themes ]]; then rm -rf $HOME/.oh-my-zsh/custom/themes; fi
+ln -s $PREFIX_DIR/omzsh_themes $HOME/.oh-my-zsh/themes
 
 # Vim
 if [[ -f $HOME/.vimrc ]]; then rm $HOME/.vimrc; fi
@@ -30,5 +32,4 @@ ln -s $PREFIX_DIR/.tmux.conf $HOME/.tmux.conf
 if [[ -d $HOME/.tmux ]]; then rm -rf $HOME/.tmux/; fi
 mkdir $HOME/.tmux
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
-
 
