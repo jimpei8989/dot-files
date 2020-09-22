@@ -13,6 +13,7 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 if [[ -f $HOME/.vimrc ]]; then rm $HOME/.vimrc; fi
 ln -s $PREFIX_DIR/.vimrc $HOME/.vimrc
 
+if [[ -d $HOME/.vim ]]; then rm -rf $HOME/.vim/; fi
 mkdir $HOME/.vim
 ln -s $PREFIX_DIR/vim_colors $HOME/.vim/colors
 
@@ -22,7 +23,12 @@ curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
 vim +PlugInstall +qall
 
 # Tmux
+if [[ -f $HOME/.tmux.conf ]]; then rm $HOME/.tmux.conf; fi
+ln -s $PREFIX_DIR/.tmux.conf $HOME/.tmux.conf
+
+# TPM
+if [[ -d $HOME/.tmux ]]; then rm -rf $HOME/.tmux/; fi
 mkdir $HOME/.tmux
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
-ln -s $PREFIX_DIR/.tmux.conf $HOME/.tmux.conf
+
 
