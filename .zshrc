@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/wujunpei/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -120,6 +120,8 @@ export LSCOLORS='Exfxhxdxcxegedcbcgadaf'
 # TYPORA
 alias typora="open -a typora"
 
+alias whichmyip="curl ifconfig.me"
+
 # Lazy
 alias zshrc="vim ~/.zshrc"
 alias rezsh="source ~/.zshrc"
@@ -130,19 +132,7 @@ alias ....="cd ../.."
 # Clock
 alias clock="tty-clock -C 6 -s -S -c -B -d 0 -a 10000000"
 
-# DSA Judge
-function submit () {
-    problem_id=$1
-    c_file=$2
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-    (git add $2) &> /dev/null
-    (git commit -m "Submit Problem ${problem_id}") &> /dev/null
-    (git push) &> /dev/null
-
-    commitPoint=$(git rev-parse HEAD)
-
-    echo "COMMIT -> ${commitPoint}"
-    
-    ssh -T git@dsa.csie.org ${commitPoint}
-}
-
+# pyenv virtualenv
+eval "$(pyenv virtualenv-init -)"

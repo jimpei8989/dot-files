@@ -1,8 +1,0 @@
-export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
-
-export PATH="~/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/cuda/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
-# export PATH="~/.local/bin:$PATH"
-
-# unalias rm
-alias ls="ls --color"
