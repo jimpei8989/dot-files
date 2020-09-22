@@ -3,12 +3,14 @@
 PREFIX_DIR="$HOME/.dot-files"
 
 # ZSH
+if [[ -f $HOME/.zshrc ]]; then rm $HOME/.zshrc; fi
 ln -s $PREFIX_DIR/.zshrc $HOME/.zshrc
 
 # OH-MY-ZSH
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Vim
+if [[ -f $HOME/.vimrc ]]; then rm $HOME/.vimrc; fi
 ln -s $PREFIX_DIR/.vimrc $HOME/.vimrc
 
 mkdir $HOME/.vim
